@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import PlantContainer from './containers/PlantContainer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+	state = {
+		plants: [],
+	};
+
+	async componentDidMount() {
+		const response = await axios.get('http://localhost:3001/plants');
+		this.setState({ plants: response.data });
+	}
+
+	async getPlants() {
+		try {
+			const response = await axios.get('http://localhost:3001/plant');
+
+			this.setState({ plants: response.data });
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
+	handleChange = (event, value) => {
+		console.log('value:', value.plant);
+		console.log('value', value);
+
+		this.setState({
+			[value.plant]: value.value,
+		});
+	};
+	render() {
+		const { plants } = this.state;
+		return (
+			<div>
+				<PlantContainer plants={plants} />
+			</div>
+		);
+	}
 }
-
 export default App;

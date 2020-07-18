@@ -1,0 +1,112 @@
+{
+	"terminal.explorerKind": "external",
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"gitlens.gitCommands.closeOnFocusOut": true,
+	"terminal.integrated.rendererType": "dom",
+	"editor.fontFamily": "Roboto Mono, monospace",
+	"editor.fontWeight": "500",
+	"terminal.integrated.fontWeight": "500",
+	"editor.fontSize": 12,
+	"window.zoomLevel": 2,
+	"workbench.iconTheme": "material-icon-theme",
+	"eslint.options": {
+		"parserOptions": {
+			"ecmaVersion": 6,
+			"sourceType": "module",
+			"ecmaFeatures": {
+				"jsx": true,
+				"modules": true
+			}
+		}
+	},
+	"javascript.updateImportsOnFileMove.enabled": "never",
+	"gitlens.advanced.messages": {
+		"suppressFileNotUnderSourceControlWarning": true,
+		"suppressShowKeyBindingsNotice": true
+	},
+	"git.enableSmartCommit": true,
+	"explorer.confirmDragAndDrop": false,
+	"workbench.colorCustomizations": {
+		"settings.modifiedItemForeground": "#FF7042"
+	},
+	"explorer.confirmDelete": false,
+	"editor.suggestSelection": "first",
+	"terminal.external.osxExec": "iTerm.app",
+	"terminal.integrated.shell.osx": "/bin/zsh",
+	"terminal.integrated.fontFamily": "monospace",
+	"javascript.implicitProjectConfig.experimentalDecorators": true,
+	"[sql]": {
+		"editor.defaultFormatter": "mtxr.sqltools"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"files.associations": {
+		"*.sql": "sql"
+	},
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"liveshare.featureSet": "insiders",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.formatOnSave": true,
+	"files.exclude": {
+		"**/.git": true,
+		"**/.DS_Store": true,
+		"**/*.js": { "when": "$(basename).ts" },
+		"**/*.js.map": true
+	},
+	"prettier.singleQuote": true,
+	"prettier.jsxSingleQuote": false,
+	"prettier.tabWidth": 4,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.useTabs": true,
+	"workbench.editor.showTabs": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+	// "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.snippetSuggestions": "top",
+	"javascript.preferences.importModuleSpecifier": "non-relative",
+	"prettier.printWidth": 400,
+	"editor.wordWrap": "on",
+	"editor.wordWrapColumn": 70,
+	"hediet.vscode-drawio.local-storage": {
+		".drawio-config": {
+			"language": "",
+			"customFonts": [],
+			"libraries": "general;uml;er;bpmn;flowchart;basic;arrows2",
+			"customLibraries": ["L.scratchpad"],
+			"plugins": [],
+			"recentColors": [],
+			"formatWidth": 0,
+			"createTarget": false,
+			"pageFormat": {
+				"x": 0,
+				"y": 0,
+				"width": 850,
+				"height": 1100
+			},
+			"search": true,
+			"showStartScreen": true,
+			"gridColor": "#d0d0d0",
+			"darkGridColor": "#6e6e6e",
+			"autosave": true,
+			"resizeImages": null,
+			"openCounter": 0,
+			"version": 18,
+			"unit": 1,
+			"ui": ""
+		}
+	},
+	"workbench.colorTheme": "Visual Studio Dark"
+}
