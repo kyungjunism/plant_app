@@ -1,84 +1,90 @@
 {
-	"plants": [
+	"users": [
 		{
 			"id": 1,
-			"plant_name": "Monstera Albo",
-			"watering_duration": 7,
-			"last_watered_date": "placeholder",
-			"water_overdue": 0,
-			"repotted_date": "placeholder",
-			"pic": "placeholder",
-			"ideal_temperature": 85
-		},
-		{
-			"id": 2,
-			"plant_name": "Mint Monstera",
-			"watering_duration": 8,
-			"last_watered_date": "placeholder",
-			"water_overdue": 0,
-			"repotted_date": "placeholder",
-			"pic": "placeholder",
-			"ideal_temperature": 85
-		},
-		{
-			"id": 3,
-			"plant_name": "Aglaonema Pictum Tricolor",
-			"watering_duration": 14,
-			"last_watered_date": "placeholder",
-			"water_overdue": 0,
-			"repotted_date": "placeholder",
-			"pic": "placeholder",
-			"ideal_temperature": 75
-		},
-		{
-			"id": 4,
-			"plant_name": "V. String of Hearts",
-			"watering_duration": 10,
-			"last_watered_date": "placeholder",
-			"water_overdue": 0,
-			"repotted_date": "placeholder",
-			"pic": "placeholder",
-			"ideal_temperature": 65
-		},
-		{
-			"id": 5,
-			"plant_name": "Variegated Adansonii",
-			"watering_duration": 7,
-			"last_watered_date": "placeholder",
-			"water_overdue": 0,
-			"repotted_date": "placeholder",
-			"pic": "placeholder",
-			"ideal_temperature": 85
-		},
-		{
-			"id": 5,
-			"plant_name": "Burle Marx",
-			"watering_duration": 7,
-			"last_watered_date": "placeholder",
-			"water_overdue": 0,
-			"repotted_date": "placeholder",
-			"pic": "placeholder",
-			"ideal_temperature": 75
-		},
-		{
-			"id": 6,
-			"plant_name": "Pink Princess",
-			"watering_duration": 14,
-			"last_watered_date": "placeholder",
-			"water_overdue": 0,
-			"repotted_date": "placeholder",
-			"pic": "placeholder",
-			"ideal_temperature": 80
-		},
-		{
-			"id": 7,
-			"plant_name": "Pasta",
-			"watering_duration": 7,
-			"last_watered_date": "placeholder",
-			"water_overdue": 0,
-			"repotted_date": "placeholder",
-			"pic": "placeholder",
-			"ideal_temperature": 75
+			"email": "amy@gmail.com",
+			"plants": [
+				{
+					"id": 1,
+					"plant_name": "Monstera Albo",
+					"watering_duration": 7,
+					"last_watered_date": "placeholder",
+					"water_overdue": 0,
+					"repotted_date": "placeholder",
+					"pic": "placeholder",
+					"ideal_temperature": 85
+				},
+				{
+					"id": 2,
+					"plant_name": "Mint Monstera",
+					"watering_duration": 8,
+					"last_watered_date": "placeholder",
+					"water_overdue": 0,
+					"repotted_date": "placeholder",
+					"pic": "placeholder",
+					"ideal_temperature": 85
+				},
+				{
+					"id": 3,
+					"plant_name": "Aglaonema Pictum Tricolor",
+					"watering_duration": 14,
+					"last_watered_date": "placeholder",
+					"water_overdue": 0,
+					"repotted_date": "placeholder",
+					"pic": "placeholder",
+					"ideal_temperature": 75
+				},
+				{
+					"id": 4,
+					"plant_name": "V. String of Hearts",
+					"watering_duration": 10,
+					"last_watered_date": "placeholder",
+					"water_overdue": 0,
+					"repotted_date": "placeholder",
+					"pic": "placeholder",
+					"ideal_temperature": 65
+				},
+				{
+					"id": 5,
+					"plant_name": "Variegated Adansonii",
+					"watering_duration": 7,
+					"last_watered_date": "placeholder",
+					"water_overdue": 0,
+					"repotted_date": "placeholder",
+					"pic": "placeholder",
+					"ideal_temperature": 85
+				},
+				{
+					"id": 5,
+					"plant_name": "Burle Marx",
+					"watering_duration": 7,
+					"last_watered_date": "placeholder",
+					"water_overdue": 0,
+					"repotted_date": "placeholder",
+					"pic": "placeholder",
+					"ideal_temperature": 75
+				},
+				{
+					"id": 6,
+					"plant_name": "Pink Princess",
+					"watering_duration": 14,
+					"last_watered_date": "placeholder",
+					"water_overdue": 0,
+					"repotted_date": "placeholder",
+					"pic": "placeholder",
+					"ideal_temperature": 80
+				},
+				{
+					"id": 7,
+					"plant_name": "Pasta",
+					"watering_duration": 7,
+					"last_watered_date": "placeholder",
+					"water_overdue": 0,
+					"repotted_date": "placeholder",
+					"pic": "placeholder",
+					"ideal_temperature": 75
+				}
+			]
 		}
 	]
 }

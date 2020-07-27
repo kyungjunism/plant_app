@@ -7,7 +7,7 @@ class PlantCard extends React.Component {
 		return (
 			<Card>
 				<Card.Content>
-					<Image floated="right" size="mini" src="https://react.semantic-ui.com/images/avatar/large/steve.jpg" />
+					<Image floated="right" size="mini" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDrlzm9S9wfxua1R1hsW4u42Kn7vTYDA5FdA&usqp=CAU" />
 					<Card.Header>
 						<span>
 							<Card.Meta>Status: {plants.plant_name}</Card.Meta>
