@@ -13,7 +13,6 @@ handleChange = (event,value) => {
         email: value.value
     })
 }
-}
 
 addNewUser = async () => {
     const { email } = this.state
