@@ -16,7 +16,7 @@ class PlantForm extends React.Component {
 		console.log('value', value);
 
 		this.setState({
-			[value.plant]: value,
+			[value.name]: value.value,
 		});
 	};
 
@@ -26,16 +26,16 @@ class PlantForm extends React.Component {
 
 		const newPlant = {
 			plant_name,
-			watering_duration: parseInt(watering_duration),
-			last_watered_date: parseInt(last_watered_date),
-			water_overdue: parseInt(water_overdue),
-			repotted_date: parseInt(repotted_date),
-			ideal_temperature: parseInt(ideal_temperature),
+			watering_duration,
+			last_watered_date,
+			water_overdue,
+			repotted_date,
+			ideal_temperature,
 		};
 		const updatedPlants = [...plants, newPlant];
 
 		try {
-			await axios.patch('http://localhost:3001/plants', { plants: [...updatedPlants] });
+			await axios.patch('http://localhost:3001/users/1', { plants: [...updatedPlants] });
 		} catch (error) {
 			console.log(error);
 		}
@@ -48,27 +48,27 @@ class PlantForm extends React.Component {
 			<Form onSubmit={this.handleSubmitForm}>
 				<Form.Field>
 					<label>Plant Name</label>
-					<Form.Input onChange={this.handleChange} name="plantName" value={plant_name} placeholder="plantName" />
+					<Form.Input type="text" onChange={this.handleChange} name="plantName" value={plant_name} placeholder="Name of Plant" />
 				</Form.Field>
 				<Form.Field>
 					<label>Watering Duration</label>
-					<Form.Input onChange={this.handleChange} name="wateringDuration" value={watering_duration} placeholder="wateringDuration" />
+					<Form.Input onChange={this.handleChange} name="wateringDuration" value={watering_duration} placeholder="Duration before next watering" />
 				</Form.Field>
 				<Form.Field>
 					<label>Last Watered Date</label>
-					<Form.Input onChange={this.handleChange} name="lastWateredDate" value={last_watered_date} placeholder="lastWateredDate" />
+					<Form.Input onChange={this.handleChange} name="lastWateredDate" value={last_watered_date} placeholder="Date last watered" />
 				</Form.Field>
 				<Form.Field>
 					<label>Water Overdue</label>
-					<Form.Input onChange={this.handleChange} name="waterOverdue" value={water_overdue} placeholder="waterOverdue" />
+					<Form.Input onChange={this.handleChange} name="waterOverdue" value={water_overdue} placeholder="Watering overdue?" />
 				</Form.Field>
 				<Form.Field>
 					<label>Repotted Date</label>
-					<Form.Input onChange={this.handleChange} name="repottedDate" value={repotted_date} placeholder="repottedDate" />
+					<Form.Input onChange={this.handleChange} name="repottedDate" value={repotted_date} placeholder="Date re-potted" />
 				</Form.Field>
 				<Form.Field>
 					<label>Ideal Temperature</label>
-					<Form.Input onChange={this.handleChange} name="idealTemperature" value={ideal_temperature} placeholder="idealTemperature" />
+					<Form.Input onChange={this.handleChange} name="idealTemperature" value={ideal_temperature} placeholder="Ideal Temperature" />
 				</Form.Field>
 			</Form>
 		);

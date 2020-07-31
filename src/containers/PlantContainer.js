@@ -2,6 +2,8 @@ import React from 'react';
 import PlantCard from '../components/PlantCard';
 import { Card, Button, Modal } from 'semantic-ui-react';
 import PlantForm from '../components/PlantForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTh } from '@fortawesome/free-solid-svg-icons';
 
 class PlantContainer extends React.Component {
 	render() {

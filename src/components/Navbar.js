@@ -10,6 +10,9 @@ class Navbar extends React.Component {
 					<Link to="/dashboard">Dashboard</Link>
 				</Menu.Item>
 				<Menu.Item>
+					<Link to="/addnewplant">Add New Plant</Link>
+				</Menu.Item>
+				<Menu.Item>
 					<Link to="/">Plants</Link>
 				</Menu.Item>
 				<Menu.Menu position="right">
