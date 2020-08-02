@@ -49,6 +49,19 @@
 .card {
 	display: flex;
 	justify-content: center;
-	flex-direction: row;
+	align-content: center;
+	border: 10px black;
+	border-radius: 12px;
+}
+
+.card-header {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.plant-basicinfo {
+	display: flex;
+	justify-content: center;
 	align-content: center;
 }

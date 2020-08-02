@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Form } from 'semantic-ui-react';
+import { Form, Button } from 'semantic-ui-react';
 import ReactDOM from 'react-dom';
 
 class PlantForm extends React.Component {
@@ -13,7 +13,7 @@ class PlantForm extends React.Component {
 			water_overdue: '',
 			repotted_date: '',
 			ideal_temperature: '',
-			pic = ''
+			pic: '',
 		};
 	}
 
@@ -28,7 +28,7 @@ class PlantForm extends React.Component {
 
 	handleSubmitForm = async () => {
 		const { plants } = this.props;
-		const { plant_name, watering_duration, last_watered_date, water_overdue, repotted_date, ideal_temperature } = this.state;
+		const { plant_name, watering_duration, last_watered_date, water_overdue, repotted_date, ideal_temperature, pic } = this.state;
 
 		const newPlant = {
 			plant_name,
@@ -49,7 +49,7 @@ class PlantForm extends React.Component {
 	};
 
 	render() {
-		const { plant_name, watering_duration, last_watered_date, water_overdue, repotted_date, ideal_temperature } = this.state;
+		const { plant_name, watering_duration, last_watered_date, water_overdue, repotted_date, ideal_temperature, pic } = this.state;
 
 		return (
 			<Form onSubmit={this.handleSubmitForm}>
@@ -77,6 +77,7 @@ class PlantForm extends React.Component {
 					<label>Picture of Plant</label>
 					<Form.Input onChange={this.handleChange} name="pic" value={pic} placeholder="Picture of Your Plant!" />
 				</Form.Field>
+				<Button type="submit">Submit!</Button>
 			</Form>
 		);
 	}

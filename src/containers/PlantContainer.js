@@ -13,11 +13,6 @@ class PlantContainer extends React.Component {
 
 		return (
 			<div>
-				<Modal trigger={<Button>Add New Plant!</Button>}>
-					<Modal.Content>
-						<PlantForm plants={plants} />
-					</Modal.Content>
-				</Modal>
 				<div className={'plant-container'}>
 					<Card.Group>
 						{renderPlants.map((plants) => {
