@@ -36,3 +36,19 @@
 		transform: rotate(360deg);
 	}
 }
+
+.plant-image {
+	display: flex;
+	height: 200px;
+	width: 200px;
+	justify-content: center;
+	flex-direction: row;
+	align-content: center;
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-content: center;
+}
