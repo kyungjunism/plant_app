@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "email": "peekabookxp@gmail.com",
+      "email": "peekabooxp@gmail.com",
       "plants": [
         {
           "id": 1,
@@ -26,7 +26,7 @@
         },
         {
           "id": 3,
-          "plant_name": "Agla. Pictum Tricolor",
+          "plant_name": "Aglaonema Pictum Tricolor",
           "watering_duration": 14,
           "last_watered_date": "placeholder",
           "water_overdue": 0,
@@ -94,6 +94,11 @@
           "pic": "https://i.pinimg.com/originals/c2/46/d9/c246d91a503d86f1effbda648dbee20e.jpg"
         }
       ]
+    },
+    {
+      "email": "kyungjun.kj.park@gmail.com",
+      "plants": [],
+      "id": 2
     }
   ]
 }

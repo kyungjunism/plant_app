@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { Form, Button } from 'semantic-ui-react';
-import ReactDOM from 'react-dom';
 
 class PlantForm extends React.Component {
 	constructor(props) {
@@ -28,13 +27,11 @@ class PlantForm extends React.Component {
 
 	handleSubmitForm = async () => {
 		const { plants } = this.props;
-		const { plant_name, watering_duration, last_watered_date, water_overdue, repotted_date, ideal_temperature, pic } = this.state;
+		const { plant_name, watering_duration, repotted_date, ideal_temperature, pic } = this.state;
 
 		const newPlant = {
 			plant_name,
 			watering_duration,
-			last_watered_date,
-			water_overdue,
 			repotted_date,
 			ideal_temperature,
 			pic,
@@ -49,10 +46,10 @@ class PlantForm extends React.Component {
 	};
 
 	render() {
-		const { plant_name, watering_duration, last_watered_date, water_overdue, repotted_date, ideal_temperature, pic } = this.state;
+		const { plant_name, watering_duration, repotted_date, ideal_temperature, pic } = this.state;
 
 		return (
-			<Form onSubmit={this.handleSubmitForm}>
+			<Form onSubmit={this.handleSubmitForm} className={'form'}>
 				<Form.Field>
 					<label>Plant Name</label>
 					<Form.Input onChange={this.handleChange} name="plant_name" value={plant_name} placeholder="Your Plant's Name!" />
@@ -60,10 +57,6 @@ class PlantForm extends React.Component {
 				<Form.Field>
 					<label>Watering Duration</label>
 					<Form.Input onChange={this.handleChange} name="watering_duration" value={watering_duration} placeholder="Frequency of Watering" />
-				</Form.Field>
-				<Form.Field>
-					<label>Last Watered Date</label>
-					<Form.Input onChange={this.handleChange} name="last_watered_date" value={last_watered_date} placeholder="Date Last Watered" />
 				</Form.Field>
 				<Form.Field>
 					<label>Repotted Date</label>

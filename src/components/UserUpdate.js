@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Checkbox } from 'semantic-ui-react';
+import { Form, Button } from 'semantic-ui-react';
 import axios from 'axios';
 
 class UserUpdate extends React.Component {

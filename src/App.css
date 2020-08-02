@@ -39,29 +39,86 @@
 
 .plant-image {
 	display: flex;
-	height: 200px;
-	width: 200px;
+	height: 200pt;
+	width: 200pt;
 	justify-content: center;
 	flex-direction: row;
 	align-content: center;
+	border-radius: 12px;
 }
 
 .card {
 	display: flex;
 	justify-content: center;
+	flex-direction: row;
 	align-content: center;
-	border: 10px black;
+	border: #282c34;
+	border-style: double;
 	border-radius: 12px;
 }
 
 .card-header {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 }
 
-.plant-basicinfo {
+.plant-name {
 	display: flex;
 	justify-content: center;
+	flex-direction: row;
 	align-content: center;
+	border: 2px black;
+	border-radius: 12px;
+	color: darkgreen;
+	text-transform: capitalize;
+	text-align: center;
+	text-overflow: ellipsis;
+	text-decoration: double;
+	text-decoration-style: wavy;
+	font-weight: bold;
+}
+
+.navbar {
+	display: flex;
+	justify-content: flex;
+	background-color: mediumaquamarine;
+	flex-direction: column;
+}
+
+.login-signup {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	background-color: mediumaquamarine;
+}
+
+.water-button {
+	font-weight: bolder;
+	border-radius: 2%;
+	shape-outside: margin-box;
+	border-radius: 12px;
+}
+
+.delete-plant {
+	font-weight: bolder;
+	border-radius: 2%;
+	shape-outside: margin-box;
+	border-radius: 12px;
+}
+
+.description {
+	font-weight: bold;
+}
+
+.form {
+	font-weight: bold;
+	border-style: groove;
+	background-image: url('https://images.assetsdelivery.com/compings_v2/samui88/samui881901/samui88190100062.jpg');
+	text-decoration-color: whitesmoke;
+	text-emphasis-color: white;
+	font-style: italic;
+	color: rgb(50, 117, 95);
+	opacity: 0.6;
 }
