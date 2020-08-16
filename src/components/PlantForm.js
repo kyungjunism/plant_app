@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { Form, Button } from 'semantic-ui-react';
+import { addNewPlant } from '../actions/UserActions';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 class PlantForm extends React.Component {
 	constructor(props) {
@@ -26,7 +29,7 @@ class PlantForm extends React.Component {
 	};
 
 	handleSubmitForm = async () => {
-		const { plants } = this.props;
+		const { plants, triggerAddNewPlant } = this.props;
 		const { plant_name, watering_duration, repotted_date, ideal_temperature, pic } = this.state;
 
 		const newPlant = {
@@ -35,11 +38,15 @@ class PlantForm extends React.Component {
 			repotted_date,
 			ideal_temperature,
 			pic,
+			last_watered_date: new Date(),
 		};
 		const updatedPlants = [...plants, newPlant];
 
 		try {
-			await axios.patch('http://localhost:3001/users/1', { plants: [...updatedPlants] });
+			await triggerAddNewPlant(newPlant);
+
+			// copy this over to userAction addNewPlant()
+			// call triggerAddNewPlant here instead
 		} catch (error) {
 			console.log(error);
 		}
@@ -59,10 +66,6 @@ class PlantForm extends React.Component {
 					<Form.Input onChange={this.handleChange} name="watering_duration" value={watering_duration} placeholder="Frequency of Watering" />
 				</Form.Field>
 				<Form.Field>
-					<label>Repotted Date</label>
-					<Form.Input onChange={this.handleChange} name="repotted_date" value={repotted_date} placeholder="Last Re-potting" />
-				</Form.Field>
-				<Form.Field>
 					<label>Ideal Temperature</label>
 					<Form.Input onChange={this.handleChange} name="ideal_temperature" value={ideal_temperature} placeholder="Plant Ideal Temp" />
 				</Form.Field>
@@ -75,4 +78,10 @@ class PlantForm extends React.Component {
 		);
 	}
 }
-export default PlantForm;
+const mapStateToProps = (state) => {
+	return { plants: state.usersData.users[0].plants };
+};
+const mapDispatchToProps = (dispatch) => {
+	return { triggerAddNewPlant: bindActionCreators(addNewPlant, dispatch) };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(PlantForm);

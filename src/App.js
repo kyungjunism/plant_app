@@ -7,10 +7,22 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import DashboardContainer from './containers/DashboardContainer';
 import UserUpdate from './components/UserUpdate';
 import PlantForm from './components/PlantForm';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getUsersList } from './actions/UserActions';
 
 class App extends React.Component {
+	async componentDidMount() {
+		const { triggergetUsersList } = this.props;
+		console.log('APP CALLING trigger functions');
+		try {
+			await triggergetUsersList();
+		} catch (error) {
+			console.log('error', error);
+		}
+	}
+
 	state = {
-		users: [],
 		seeForm: false,
 		userId: '',
 	};
@@ -27,19 +39,9 @@ class App extends React.Component {
 		}
 	};
 
-	async componentDidMount() {
-		try {
-			const response = await axios.get('http://localhost:3001/users');
-
-			this.setState({ users: response.data });
-		} catch (error) {
-			console.log(error);
-		}
-	}
-
 	async getUsers() {
 		try {
-			const response = await axios.get('http://localhost:3001/users');
+			const response = await axios.get('http://localhost:3002/users');
 
 			this.setState({ users: response.data });
 		} catch (error) {
@@ -56,7 +58,8 @@ class App extends React.Component {
 		});
 	};
 	render() {
-		const { users } = this.state;
+		console.log('ANYTHING');
+		const { users } = this.props;
 		const { userId } = this.state;
 
 		if (users.length === 0) {
@@ -76,4 +79,15 @@ class App extends React.Component {
 		);
 	}
 }
-export default App;
+const mapStateToProps = (state) => {
+	return {
+		users: state.usersData.users,
+	};
+};
+
+//You can have a whole list of actions here below
+const mapDispatchToProps = (dispatch) => {
+	return { triggergetUsersList: bindActionCreators(getUsersList, dispatch) };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
