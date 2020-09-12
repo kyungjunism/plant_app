@@ -39,16 +39,6 @@ class App extends React.Component {
 		}
 	};
 
-	async getUsers() {
-		try {
-			const response = await axios.get('http://localhost:3002/users');
-
-			this.setState({ users: response.data });
-		} catch (error) {
-			console.log(error);
-		}
-	}
-
 	handleChange = (event, value) => {
 		console.log('value:', value.name);
 		console.log('value', value);
@@ -72,8 +62,8 @@ class App extends React.Component {
 				<Navbar />
 				<Switch>
 					<Route path="/signup" component={UserUpdate} />
-					<Route path="/addnewplant" render={(props) => <PlantForm plants={amy.plants} />} />
-					<Route path="/" render={(props) => <PlantContainer plants={amy.plants} getUsers={this.getUsers} />} />
+					<Route path="/addnewplant" render={(props) => <PlantForm/>} />
+					<Route path="/" render={(props) => <PlantContainer/>} />
 				</Switch>
 			</div>
 		);
