@@ -5,9 +5,6 @@ import PlantForm from '../components/PlantForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTh } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-import { getUsersList } from '../actions/UserActions';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 class PlantContainer extends React.Component {
 	handleDelete = async (plantId) => {
@@ -20,7 +17,7 @@ class PlantContainer extends React.Component {
 			return true;
 		});
 		try {
-			await axios.patch('http://localhost:3002/users/1', { plants: [...plantsDeleted] });
+			await axios.patch('http://localhost:3001/users/1', { plants: [...plantsDeleted] });
 			await getUsers();
 		} catch (error) {
 			console.log(error);
@@ -45,16 +42,5 @@ class PlantContainer extends React.Component {
 		);
 	}
 }
-const mapStateToProps = (state) => {
-	return {
-		users: state.usersData.users,
-	};
-};
 
-const mapDispatchToProps = (dispatch) => {
-	return {
-		triggerGetUsersList: bindActionCreators(getUsersList, dispatch),
-	};
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(PlantContainer);
+export default PlantContainer;
