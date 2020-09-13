@@ -10,7 +10,7 @@ export const getUsersList = () => {
 	console.log('function being called IN userActions');
 	return async (dispatch, getState) => {
 		try {
-			const response = await axios.get('http://localhost:3002/users');
+			const response = await axios.get('http://localhost:3001/users');
 			//const users = response.data; CAN BE HERE OR BELOW
 			dispatch({
 				//allows you to send info to reducer
@@ -50,7 +50,7 @@ export const addNewPlant = (newPlant) => {
 		const updatedUser = { ...users[0] };
 		updatedUser.plants = [...plants, newPlant];
 		try {
-			await axios.patch(`http://localhost:3002/users/1`, { plants: [...updatedUser.plants] });
+			await axios.patch(`http://localhost:3001/users/1`, { plants: [...updatedUser.plants] });
 		} catch (error) {
 			console.log(error);
 		}

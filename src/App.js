@@ -41,7 +41,7 @@ class App extends React.Component {
 
 	async getUsers() {
 		try {
-			const response = await axios.get('http://localhost:3002/users');
+			const response = await axios.get('http://localhost:3001/users');
 
 			this.setState({ users: response.data });
 		} catch (error) {
